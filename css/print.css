@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* Contrast */
+/* line 2, ../sass/print.scss */
+* {
+  background-color: #fff;
+  color: #000;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+/* line 9, ../sass/print.scss */
+nav, footer, #decor, #respond {
+  display: none;
+}
+
+/* line 13, ../sass/print.scss */
+body {
+  font: 12px/1.4 sans-serif;
+}
+
+/* line 17, ../sass/print.scss */
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 22, ../sass/print.scss */
+h3 {
+  font-size: 18px;
+}
+
+/* line 26, ../sass/print.scss */
+.wrapper {
+  margin: 0 auto;
+  width: 85%;
+}
+
+/* Don’t let images break anything. */
+/* line 32, ../sass/print.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Display the href of any links. */
+/* line 38, ../sass/print.scss */
+a:link:after, a:visited:after {
+  content: " (" attr(href) ")";
+  display: block;
+  font-size: smaller;
+}
+
+/* Any links that are root relative to your site need prepending with your URL. */
+/* line 45, ../sass/print.scss */
+a[href^="/"]:after {
+  content: " (http://yoururlhere.com" attr(href) ")";
+  font-size: smaller;
+}
+
+/* Any Flash/video content can’t be printed so leave a message. */
+/* line 51, ../sass/print.scss */
+object:after {
+  content: "Flash/video content. Head to http://yoururlhere.com/ to view this content.";
+  display: block;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}

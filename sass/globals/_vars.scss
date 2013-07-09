@@ -1,0 +1,24 @@
+// Style wide settings
+$color-text: #333;
+$color-gray: #888;
+$color-heading: #efc19d;
+$color-link: #17c;
+$color-link-hover: #a53;
+
+$link-border: 1px solid #ced2df;
+
+$font-body: 'Source Sans Pro', sans-serif;
+
+/* font-heading is a mixin, because headings have more than just a font-family */
+@mixin font-heading {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+}
+
+/* Modular scale */
+
+
+$baseline: em(24);
+
+$hnvlilalighter: #ccaeda;
+$mobilewidth: 480px;

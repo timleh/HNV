@@ -1,0 +1,22 @@
+// Breakpoints for responsive design
+$breakpoint-narrow: $cols7;
+$breakpoint-medium: $cols10;
+$breakpoint-wide: $cols12;
+
+@mixin breakpoint($point) {
+    @if $point == wide {
+        @media (min-width: $breakpoint-wide) { @content; }
+        .oldie & { @content; }
+    }
+    @else if $point == medium {
+        @media (min-width: $breakpoint-medium) { @content; }
+        .oldie & { @content; }
+    }
+    @else if $point == narrow {
+        @media (min-width: $breakpoint-narrow) { @content; }
+        .oldie & { @content; }
+    }
+    @else {
+        @media (#{$point}) { @content; }
+    }
+}

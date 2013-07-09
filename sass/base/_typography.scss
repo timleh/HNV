@@ -1,0 +1,101 @@
+
+body {
+    font: 100%/1.5 $font-body;
+}
+body, input, textarea {
+    color: $color-text;
+}
+input, textarea {
+    font-family: $font-body;
+    font-size: 1em;
+    line-height: $baseline;
+}
+textarea {
+    line-height: $baseline;
+}
+
+/* margins */
+ol, ul, p, pre, table, form, img {
+    margin: 0 0 $baseline;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: $color-heading;
+    @include font-heading;
+    font-weight: 700;
+}
+h1, .fake-h1 {
+    font-size: 2.625em;
+    line-height: em(48, 2.625*16);
+    margin: 0 0 em(24, 2.625*16);
+}
+h2, .fake-h2 {
+    font-size: 2em;
+    line-height: em(48, 2*16);
+    margin: 0 0 em(24, 2*16);
+}
+h3, .fake-h3 {
+    font-size: 1.25em;
+    line-height: em(24, 1.25*16);
+    margin: 0 0 em(24, 1.25*16);
+}
+h4, .fake-h4 {
+    font-size: 1em;
+    margin: 0 0 em(24);
+}
+h5, .fake-h5 {
+    font-size: 1em;
+    margin: 0 0 em(24);
+}
+h6, .fake-h6 {
+    font-size: 0.75em;
+    margin: 0 0 em(24, 0.75*16);
+}
+h5, h6 {
+    letter-spacing: 0.0625em;
+    text-transform: uppercase;
+}
+
+
+a {
+    color: $color-link;
+    text-decoration: none;
+}
+a:hover {
+    border-color: $color-link-hover;
+    color: $color-link-hover;
+}
+a:active, a:focus {
+    opacity: .7;
+}
+
+blockquote {
+    border-left: 0.125em solid #bbb;
+    color:$color-gray;
+    margin: 0 0 $baseline;
+    padding-left: 2em;
+}
+
+pre, code, tt {
+    font: 1em/1.3 'Ubuntu Mono', Consolas, 'DejaVu Sans Mono', Monaco, 'Courier New', Courier, monospace;
+}
+code {
+    display:inline;
+    font-weight:600;
+}
+pre code {
+    background:transparent;
+    border:0;
+    display:block;
+    font-weight: 400;
+    padding:0;
+}
+pre {
+    overflow-x: auto;
+}
+
+
+small {
+    font-size:0.85em;
+}

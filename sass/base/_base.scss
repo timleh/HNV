@@ -1,0 +1,43 @@
+
+html {
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+
+    /* Inflate text size on mobiles by full increments only */
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+
+    font-size: 0.8em;
+
+    @include breakpoint(narrow) {
+        font-size: 1em;
+    }
+}
+
+.wrapper, .row {
+    @extend .clearfix;
+    margin: 0 auto;
+    max-width: $cols12;
+}
+
+.row > div {
+    @include breakpoint(medium) {
+        float: right;
+        width: $cols5;
+    }
+}
+.row > div:first-child {
+    @include breakpoint(medium) {
+        float: left;
+    }
+}
+
+/* some space at the sides by default */
+body > * {
+    padding-left: em(15, 0.8*16) !important;
+    padding-right: em(15, 0.8*16) !important;
+    @media (max-width: $mobilewidth) {
+      padding-left: 4px !important;
+      padding-right: 4px !important;
+    }
+}

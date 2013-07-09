@@ -1,0 +1,19 @@
+.site-header {
+    @extend .clearfix;
+    padding-top:$baseline;
+}
+
+.header-img-container {
+	position: relative;
+	height: 157px;
+
+	img {
+		margin: 0;
+	}
+}
+
+.header-thumbnails {
+	position: absolute;
+	right: $gutter;
+	bottom: $baseline;
+}

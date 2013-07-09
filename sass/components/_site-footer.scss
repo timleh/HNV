@@ -1,0 +1,52 @@
+.site-footer {
+    color: $color-gray;
+    padding-bottom: $baseline;
+    text-align: center;
+
+    a {
+       color: $color-text;
+    }
+
+    p {
+        font-size: 0.75em;
+        margin: 0;
+    }
+}
+
+footer {
+    background: url("../img/footer-bg.png");
+    color: #fff;
+    font-size:0.75em;
+    padding: 0;
+    text-align:center;
+    height: 155px;
+    margin: 0;
+
+    h4 {
+        font-size:1.2em;
+        color: #ffffff;
+        margin-bottom: 6px;
+    }
+
+    .address-info {
+        float: left;
+        margin-left: $cols2;
+        margin-top: $baseline*1.5;
+    }
+
+    .footer-logo {
+        float: left;
+        margin-left: $cols1;
+        margin-top: $baseline;
+    }
+
+    .slogan {
+        font-size:1.0em;
+        color: $color-heading;
+        font-style: italic;
+        font-weight: bold;
+        float: right;
+        margin-right: $cols2;
+        margin-top: $baseline*1.5;
+    }
+}

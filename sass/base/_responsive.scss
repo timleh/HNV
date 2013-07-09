@@ -1,0 +1,23 @@
+.show-on-small-screen {
+	display: none;
+}
+
+.only-on-small-screen {
+	display: none;
+}
+
+@media (max-width: $mobilewidth) {
+	.only-on-small-screen {
+		display: inline;
+	}
+	.show-on-small-screen {
+		display: inline;
+	}
+	.hide-on-small-screen {
+		display: none;
+	}
+	.main-nav li {
+		display: inline-block;
+		margin-left: 4px;
+	}
+}
