@@ -1,7 +1,10 @@
 .site-footer {
-    color: $color-gray;
-    padding-bottom: $baseline;
+    background: url("../img/footer-bg.png");
+    color: #fff;
+    padding: 0;
+    margin: 0;
     text-align: center;
+    height: 149px;
 
     a {
        color: $color-text;
@@ -14,39 +17,42 @@
 }
 
 footer {
-    background: url("../img/footer-bg.png");
-    color: #fff;
-    font-size:0.75em;
+    font-size: 1.0em;
     padding: 0;
+    margin: $baseline/2 0;
     text-align:center;
-    height: 155px;
-    margin: 0;
 
     h4 {
-        font-size:1.2em;
+        font-size:1.0em;
         color: #ffffff;
         margin-bottom: 6px;
-    }
-
-    .address-info {
-        float: left;
-        margin-left: $cols2;
-        margin-top: $baseline*1.5;
     }
 
     .footer-logo {
         float: left;
         margin-left: $cols1;
-        margin-top: $baseline;
+        margin-top: $baseline/2;
+        width: $cols2;
+
+        img {
+          margin: 0;
+        }
+    }
+
+    .address-info {
+        text-align: left;
+        float: left;
+        margin: $baseline 0 0 $gutter;
+        color: white;
     }
 
     .slogan {
-        font-size:1.0em;
-        color: $color-heading;
+        font-size:1em;
+        color: white;
         font-style: italic;
         font-weight: bold;
         float: right;
-        margin-right: $cols2;
+        margin-right: $cols4;
         margin-top: $baseline*1.5;
     }
 }

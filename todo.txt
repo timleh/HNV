@@ -1,0 +1,10 @@
+todo:
+
+- <header class="site-header">
+- etusivu topical
+- thumbnails pois
+- container pois
+- articleContent -> article-content
+- nav-main-shade
+
+	

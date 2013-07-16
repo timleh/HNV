@@ -1,39 +1,41 @@
-.main-nav {
-    margin-left: $gutter/2;
-    padding-left:0;
-    width:100%;
-    overflow: hidden;
-}
-
-.main-nav {
-    background: url("../img/navi-bg.png");
-    padding:$baseline/3 10px $baseline/3 10px;
-    margin-bottom: $baseline/3;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-}
-
-.main-nav li {
-    color: #fff;
-    padding: 0;
-    margin: 0;
-}
-
-.main-nav a {
-    &:hover { background: $hnvlilalighter; }
-    margin-left: 16px;
-    color: #fff;
-    height: 33px;
-    padding: 10px 8px 0px 8px;
-    font-size: 13pt;
-}
-
-.main-nav-shade {
+.nav-main-shade {
     background: url("../img/navi-shade.png");
     height: 15px;
+    margin-bottom: 16px;
 }
 
-a.selected {
-    background: url("../img/navi-selected-bg.png");
+.nav, [class|="nav"] {
+    padding-left: 0;
+}
+
+.nav-main {
+    background: url("../img/navi-bg.png");
+    width: 100%;
+
+    li:first-child {
+        margin-left: $cols1;
+    }
+
+    a {
+        border: 0;
+        &:hover { background: $hnvlilalighter; }
+        margin-left: 16px;
+        color: #fff;
+        height: 33px;
+        padding: 8px 8px 0px 8px;
+        font-size: 13pt;
+    }
+
+    a.selected {
+        background: url("../img/navi-selected-bg.png");
+        font-weight: 700;
+    }
+
+    margin: 0;
+
+}
+
+.nav-breadcrumb li + li:before {
+    content: "\00bb";
+    margin-right: .3em;
 }

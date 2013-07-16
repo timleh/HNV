@@ -81,7 +81,7 @@ function resolvePageId() {
         '/seura/palaute': 'palaute',
         '/seura': 'seura' };
 
-    var pageName = ((""+location).match(RegExp('.*:\/\/[^\/]*(\/[^?#]*)'))||[,null])[1];
+    var pageName = ((""+location).match(RegExp('http:\/\/[^\/]*(\/[^?#]*)'))||[,null])[1];
 
     if(pageName in pages) {
         return pages[pageName];

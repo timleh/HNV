@@ -1,0 +1,112 @@
+#
+# Setting Wolf CMS requirements
+#
+# On some server configurations you may need to comment out one or more of
+# the three lines below due to server limitations.
+#
+
+php_flag magic_quotes_gpc off
+AddDefaultCharset UTF-8
+Options -Indexes +FollowSymLinks
+
+#
+# Setting rewrite rules
+#
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # Set next line to your Wolf CMS root - if not in subdir, then just /
+  RewriteBase /
+
+  # Rules to allow install sequence to test for mod_rewrite support
+  #RewriteRule ^wolf/install/index.html$ wolf/install/index.php?rewrite=1 [L,QSA]
+  #RewriteRule ^wolf/install/index.php$ wolf/install/index.php?rewrite=1 [L,QSA]
+  #RewriteRule ^wolf/install/$ wolf/install/index.php?rewrite=1 [L,QSA]
+  
+  #RewriteCond %{REQUEST_FILENAME} !-f
+  #RewriteCond %{REQUEST_FILENAME} !-d
+  #RewriteCond %{REQUEST_FILENAME} !-l
+  # Main URL rewriting.
+  #RewriteRule ^(.*)$ index.php?WOLFPAGE=$1 [L,QSA]
+
+  RewriteCond %{QUERY_STRING} !fixredirect=looping
+  RewriteCond %{QUERY_STRING} ^lapset\.html$
+  RewriteRule ^ /liikunta/lasten? [R=301,L]
+  RewriteCond %{QUERY_STRING} ^aikuiset\.html$
+  RewriteRule ^ /liikunta/aikuisten? [R=301,L]
+  RewriteCond %{QUERY_STRING} ^kuvaukset\.html$
+  RewriteRule ^ /liikunta/tuntikuvaukset? [R=301,L]
+  RewriteCond %{QUERY_STRING} ^ohjaajat\.html$
+  RewriteRule ^ /liikunta/ohjaajat? [R=301,L]
+  RewriteCond %{QUERY_STRING} ^paikat\.html$
+  RewriteRule ^ /liikunta/paikat? [R=301,L]
+  RewriteCond %{QUERY_STRING} ^hinnat\.html$
+  RewriteRule ^ /liikunta/hinnat? [R=301,L]
+  RewriteCond %{QUERY_STRING} ^tietoa\.html$
+  RewriteRule ^ /seura? [R=301,L]
+  RewriteCond %{QUERY_STRING} ^kilta\.html$
+  RewriteRule ^ /seura/kilta? [R=301,L]
+  RewriteCond %{QUERY_STRING} ^irjala\.html$
+  RewriteRule ^ /kerho/irjala? [R=301,L]
+  RewriteCond %{QUERY_STRING} ^jumpparit\.html$
+  RewriteRule ^ /seura/jumpparit? [R=301,L]
+  RewriteCond %{QUERY_STRING} ^yhteystiedot\.html$
+  RewriteRule ^ /seura/yhteystiedot? [R=301,L]
+  RewriteCond %{QUERY_STRING} ^palaute\.html$
+  RewriteRule ^ /seura/palaute? [R=301,L]
+  RewriteCond %{QUERY_STRING} ^ohjaajat/ohj_meronen$
+  RewriteRule ^ /liikunta/ohjaajat/johanna_meronen? [R=301,L]
+  RewriteCond %{QUERY_STRING} ^ohjaajat/ohj_kahiluoto$
+  RewriteRule ^ /liikunta/ohjaajat/jenni_kahiluoto? [R=301,L]
+  RewriteCond %{QUERY_STRING} ^ohjaajat/ohj_kanerva$
+  RewriteRule ^ /liikunta/ohjaajat/marjo_kanerva? [R=301,L]
+  RewriteCond %{QUERY_STRING} ^ohjaajat/ohj_mikkola$
+  RewriteRule ^ /liikunta/ohjaajat/jenni_mikkola? [R=301,L]
+  RewriteCond %{QUERY_STRING} ^ohjaajat/ohj_paimensaloputkonen$
+  RewriteRule ^ /liikunta/ohjaajat/inkeri_paimensalo-putkonen? [R=301,L]
+  RewriteCond %{QUERY_STRING} ^ohjaajat/ohj_talonen$
+  RewriteRule ^ /liikunta/ohjaajat/seija_talonen? [R=301,L]
+  RewriteCond %{QUERY_STRING} ^ohjaajat/ohj_kekalainen$
+  RewriteRule ^ /liikunta/ohjaajat/virpi_kekalainen? [R=301,L]
+  RewriteCond %{QUERY_STRING} ^ohjaajat/ohj_gronlund$
+  RewriteRule ^ /liikunta/ohjaajat/reetta_gronlund? [R=301,L]
+
+  RewriteRule ^liikunta/aikuisten$			/liikunta/jumpat [R=301,L]
+  RewriteRule ^liikunta/jumpat$				/jumpat-tampere [R=301,L]
+  RewriteRule ^liikunta/lasten$				/lasten-jumpat [R=301,L]
+  RewriteRule ^seura/palaute$				/seura/yhteystiedot [R=301,L]
+  RewriteRule ^seura/kilta$					/seura [R=301,L]
+  RewriteRule ^liikunta/tuntikuvaukset$		/jumpat-tampere [R=301,L]
+  RewriteRule ^lasten-jumpat$				/lasten-liikunta-tampere [R=301,L]
+
+  RewriteRule ^liikunta/lasten$				?lapset.html?fixredirect=looping
+  RewriteRule ^lasten-liikunta-tampere$		?lapset.html?fixredirect=looping
+  
+#  RewriteRule ^liikunta/aikuisten$			?aikuiset.html?fixredirect=looping
+#  RewriteRule ^liikunta/jumpat$				?aikuiset.html?fixredirect=looping
+  RewriteRule ^jumpat-tampere$        ?aikuiset.html?fixredirect=looping
+  RewriteRule ^jumpat-tampere/puistojumppa$        ?aikuiset/puistojumppa.html?fixredirect=looping
+  RewriteRule ^liikunta/tuntikuvaukset$		?kuvaukset.html?fixredirect=looping
+  RewriteRule ^liikunta/ohjaajat$			?ohjaajat.html?fixredirect=looping
+  RewriteRule ^liikunta/paikat$				?paikat.html?fixredirect=looping
+  RewriteRule ^liikunta/hinnat$				?hinnat.html?fixredirect=looping
+  RewriteRule ^seura$						?tietoa.html?fixredirect=looping
+  RewriteRule ^seura/kilta$					?kilta.html?fixredirect=looping
+  RewriteRule ^kerho/irjala$				?irjala.html?fixredirect=looping
+  RewriteRule ^seura/jumpparit$				?jumpparit.html?fixredirect=looping
+  RewriteRule ^seura/yhteystiedot$			?yhteystiedot.html?fixredirect=looping
+  RewriteRule ^seura/palaute$				?palaute.html?fixredirect=looping
+  RewriteRule ^seura/palaute$				?palaute.html?fixredirect=looping
+  RewriteRule ^tiedotteet/(.*)$				?articles/$1.html
+  RewriteRule ^ilmoittautuminen$			?ilmoittautuminen.html
+  RewriteRule ^ilmoittautuminen-ohje$		?ilmoittautuminen-ohje.html
+  RewriteRule ^seura/johto$					?johto.html
+
+  RewriteRule ^uusi$         ?uusi-etusivu.html&fixredirect=looping
+  RewriteRule ^uusi/jumpat-tampere$         ?uusi-jumpat-tampere.html&fixredirect=looping
+    
+  RewriteRule ^liikunta/ohjaajat/(.*)$		?ohjaajat/$1
+  RewriteRule ^seura/jumpparit/(.*)$		?jumpparit/$1
+  
+  
+</IfModule>

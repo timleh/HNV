@@ -1,9 +1,11 @@
 // Style wide settings
 $color-text: #333;
 $color-gray: #888;
-$color-heading: #efc19d;
+$color-heading: #78468f;
+$announcement-heading-color: #9b7fb2;
 $color-link: #17c;
 $color-link-hover: #a53;
+$lila-bg: #f4ecf9;
 
 $link-border: 1px solid #ced2df;
 
@@ -12,7 +14,7 @@ $font-body: 'Source Sans Pro', sans-serif;
 /* font-heading is a mixin, because headings have more than just a font-family */
 @mixin font-heading {
     font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 /* Modular scale */

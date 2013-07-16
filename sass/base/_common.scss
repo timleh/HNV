@@ -27,19 +27,54 @@
   user-select: none;
 }
 
+.fb-like-button-container {
+  width: 270px;
+  position: absolute;
+  top: -380px;
+  right: 0px;
+
+  div {
+    width: 120px;
+    height: 25px;
+  }
+}
+
+.lang-bar {
+  position: absolute;
+  top: -380px;
+  right: 0px;
+}
+
 .bottom-bar {
   text-align: center;
+  display: block;
+  clear: both;
 }
 
-.fb-like-box {
-  float: right;
+.topical {
+  font-style: italic;
+  color: #343434;
+  font-size: 1.4em;
 }
 
-.articleContent {
+.front-page-content {
+  width: $cols8;
+  display: inline-block;
+  float: left;
+}
 
+.front-page-sidebar {
+  background-color: $lila-bg;
+  width: $cols4;
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+  margin-left: $gutter;
+}
+
+.article-content {
   padding: $gutter;
-  width: $cols6;
-  @include background-image(linear-gradient(#fbf5ff, #fbf5ff, white));
+  @include background-image(linear-gradient(white, white, #f5f5f5));
 
   h3 {
     color: #794590;
@@ -52,6 +87,27 @@
 
 .highlight {
     background-color: #fef5d3;
+}
+
+.announcement {
+  text-align: center;
+  a {
+    font-size: 1.7em;
+    color: $announcement-heading-color;
+    font-style: italic;
+    font-weight: 600;
+  }
+  margin: $baseline*3 0;
+}
+
+.fb-like-box-container {
+  padding: $baseline 2px;
+  text-align: center;
+}
+
+.fb-like-box {
+  width: 292px;
+  background-color: white;
 }
 
 #map_canvas {

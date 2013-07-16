@@ -24,6 +24,8 @@
     <script type="text/javascript" src="./uusi-etusivu_files/jquery.mousewheel-3.0.6.pack.js"></script>
     <script type="text/javascript" src="./uusi-etusivu_files/common-2.js"></script>
 
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,700italic,600italic' rel='stylesheet' type='text/css'>
+
     <script type="text/javascript">
         $(document).ready(function() {
             $('.fancybox').fancybox();
@@ -167,23 +169,15 @@ rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-wid
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<header>
+<header class="site-header">
     <div class="wrapper">
 
         <!-- uusi -->
-        <div class="hide-on-small-screen">
           <div class="header-img-container">
-              <a href="http://www.hameennaisvoimistelijat.fi/"><img src="./uusi-etusivu_files/header.png" alt=""></a>
-              <div class="header-thumbnails">
-                  <a href="http://www.facebook.com/home.php#%21/pages/HNV-Hameen-Naisvoimistelijat/111074065597621"><img src="./uusi-etusivu_files/fb.png" alt="FB"></a>
-              </div>
+              <a href="http://www.hameennaisvoimistelijat.fi/"><img src="./img/header.png" alt=""></a>
           </div>
-        </div>
-        <div class="only-on-small-screen">
-           <a href="http://www.hameennaisvoimistelijat.fi/"><img src="./uusi-etusivu_files/header.png" alt=""></a>
-        </div>
 
-        <ul class="nav main-nav" id="navlist">
+        <ul class="nav-main" id="navlist">
             <li class="act"><a href="./uusi-etusivu_files/uusi-etusivu.html" id="etusivu" class="selected">Etusivu</a></li>
             <li><a href="http://hameennaisvoimistelijat.fi/?uusi-jumpat-tampere.html" id="aikuisten_liikunta">Aikuisten liikunta</a></li>
             <li><a href="http://hameennaisvoimistelijat.fi/?uusi-puistojumppa.html" id="puistojumppa">Puistojumppa</a></li>
@@ -201,7 +195,7 @@ rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-wid
             -->
         </ul>
         <!-- uusi -->
-        <div class="main-nav-shade">
+        <div class="nav-main-shade">
         </div>
 
     </div>
@@ -209,7 +203,9 @@ rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-wid
 
 <div class="main" role="main">
     <div class="wrapper">
-        <div class="content">
+    <div class="container">
+
+<div class="front-page-content">
 <h1>HNV - Jumppaseura Tampereella</h1>
 <p class="noindent hide-on-small-screen">
 HNV on tamperelainen harrastevoimisteluseura, jonka jumpat liikuttavat lähes 500 naista ja miestä Tampereella! Katso <a href="http://hameennaisvoimistelijat.fi/?uusi-jumpat-tampere.html">aikuisten liikunnan</a> tai <a href="http://hameennaisvoimistelijat.fi/?uusi-lasten-liikunta-tampere.html">lasten liikunnan</a> tarjonta. HNV järjestää myös aamu- ja iltapäivätoimintaa sekä <a href="http://hameennaisvoimistelijat.fi/?uusi-iltapaivatoiminta.html">kesätoimintaa lapsille Messukylässä</a>. Voit seurata ajankohtaisia tiedotteita tältä sivulta:
@@ -219,17 +215,11 @@ HNV on tamperelainen harrastevoimisteluseura, jonka jumpat liikuttavat lähes 50
 HNV on tamperelainen harrastevoimisteluseura, jonka jumpat liikuttavat lähes 500 naista ja miestä Tampereella! Voit seurata ajankohtaisia tiedotteita tältä sivulta:
 </p>
 
-<div class="hide-on-small-screen">
-  <div class="fb-like-box fb_iframe_widget" data-href="https://www.facebook.com/pages/HNV-H%C3%A4meen-Naisvoimistelijat/111074065597621" data-width="410" data-height="700" data-show-faces="true" data-stream="true" data-show-border="true" data-header="true" fb-xfbml-state="rendered"><span style="vertical-align: bottom; width: 410px; height: 700px;"><iframe name="f2808aa6a4" width="410px" height="700px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="./uusi-etusivu_files/like_box.html" style="border: none; visibility: visible; width: 410px; height: 700px;" class=""></iframe></span></div>
-</div>
-
-<h1>Ajankohtaista jumpilla</h1>
-
-
+<h1 class="topical">Ajankohtaista jumpilla</h1>
 
   <div class="entry">
     <a name="hydrobic-ohjaaja"></a> 
-    <div class="articleContent">
+    <div class="article-content">
       <h3>Hydrobic ohjaaja <span class="article-date">
  · <span class="article-daysago">26.6.2013</span></span></h3>
       <p>	</p><p>Hämeen Naisvoimistelijat hakee <strong>syyskaudeksi</strong> hydrobic ohjaajaa. <br>
@@ -243,7 +233,7 @@ Laita sähköpostia, jos olet kiinnostunut.</p>
 
   <div class="entry">
     <a name="toimisto-ja-ilmottautumiset"></a> 
-    <div class="articleContent">
+    <div class="article-content">
       <h3>Toimisto ja ilmottautumiset <span class="article-date">
  · <span class="article-daysago">26.6.2013</span></span></h3>
       <p>	</p><p><strong>Toimisto on suljettu 27.6.-29.7.2013</strong>.<br>
@@ -256,7 +246,7 @@ Jumpille ilmoittautuminen alkaa <strong>elokuun puolessa välissä.</strong></p>
 
   <div class="entry">
     <a name="haemeen-naisvoimistelijat-85-vuotta"></a> 
-    <div class="articleContent">
+    <div class="article-content">
       <h3>Hämeen Naisvoimistelijat 85 vuotta <span class="article-date">
  · <span class="article-daysago">10.6.2013</span></span></h3>
       <p>	</p><p>Hämeen Naisvoimistelijat ry täyttää tänä vuonna 85 vuotta! </p>
@@ -268,7 +258,7 @@ Jumpille ilmoittautuminen alkaa <strong>elokuun puolessa välissä.</strong></p>
 
   <div class="entry">
     <a name="aeaenestaekaeae-puistojumppaa"></a> 
-    <div class="articleContent">
+    <div class="article-content">
       <h3>Äänestäkää puistojumppaa <span class="article-date">
  · <span class="article-daysago">3.6.2013</span></span></h3>
       <p>	</p><p><a href="http://www.aamulehti.fi/Pirkanmaa/1194816764367/artikkeli/mika+on+tampereen+paras+puistojumppa+aanesta+.html">Äänestäkää</a> Hämeen Naisvoimistelijoiden puistojumppaa.</p><p></p>
@@ -278,7 +268,7 @@ Jumpille ilmoittautuminen alkaa <strong>elokuun puolessa välissä.</strong></p>
 
   <div class="entry">
     <a name="puistojumppa-ohjaajat"></a> 
-    <div class="articleContent">
+    <div class="article-content">
       <h3>Puistojumppa ohjaajat <span class="article-date">
  · <span class="article-daysago">29.5.2013</span></span></h3>
       <p>	</p><p><strong>26.6</strong> Sari Uusmalmi</p>
@@ -294,7 +284,7 @@ Jumpille ilmoittautuminen alkaa <strong>elokuun puolessa välissä.</strong></p>
 
   <div class="entry">
     <a name="puistojumpat"></a> 
-    <div class="articleContent">
+    <div class="article-content">
       <h3>Kesäjumpat <span class="article-date">
  · <span class="article-daysago">3.5.2013</span></span></h3>
       <p>	</p><p><a href="http://hameennaisvoimistelijat.fi/jumpat-tampere/puistojumppa?from=etusivu">Puistojumppa</a> Tampereen Kalevan uintikeskuksen nurmella <strong>22.5. – 28.8.2013</strong><br>
@@ -308,8 +298,24 @@ Kertamaksu 5 €</p>
 	<p>Tervetuloa! </p><p></p>
           </div>
 
+
   </div>
-        </div>
+
+</div>
+
+
+<div class="front-page-sidebar">
+    <div class="announcement">
+        <a href="#">Tutustu iltapäivätoimintaan</a>
+    </div>
+
+    <div class="hide-on-small-screen">
+      <div class="fb-like-box-container">
+          <div class="fb-like-box fb_iframe_widget" data-href="https://www.facebook.com/pages/HNV-H%C3%A4meen-Naisvoimistelijat/111074065597621" data-width="292" data-height="700" data-show-faces="true" data-stream="true" data-show-border="true" data-header="true" fb-xfbml-state="rendered"><span style="vertical-align: bottom; width: 410px; height: 700px;"><iframe name="f2808aa6a4" width="410px" height="700px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="./uusi-etusivu_files/like_box.html" style="border: none; visibility: visible; width: 292px; height: 700px;" class=""></iframe></span></div>
+    </div>
+    </div>
+</div>
+
 
         <div class="bottom-bar">
                 <a href="http://www.facebook.com/home.php#%21/pages/HNV-Hameen-Naisvoimistelijat/111074065597621" target="_blank"><img src="./uusi-etusivu_files/fb.jpg" class="logo" alt=""></a>
@@ -319,30 +325,38 @@ Kertamaksu 5 €</p>
                 <img src="./uusi-etusivu_files/hydrobic.jpg" class="logo" alt="Hydrobic">
                 <img src="./uusi-etusivu_files/perhe.png" class="logo" alt="">
         </div>
-    <footer>
-        <div class="address-info">
-            <h4>Hämeen Naisvoimistelijat Ry</h4>
-            <p>Toimisto, ma-pe klo 10-12<br>
-            toimisto(at)hameennaisvoimistelijat.fi<br>
-            045 631 0279<br>
-            Savikukonkatu 13, 33530 Tampere</p>
-        </div>
 
-        <div class="footer-logo">
-            <img src="./uusi-etusivu_files/hnv-logo.png" alt="HNV">
-        </div>
-
-        <div class="slogan">
-            <p>Hämeen naisvoimistelijat ry on<br>
-            tamperelainen jumppaseura, joka liikuttaa<br>
-            viikoittain lähes viittäsataa jumppaajaa.<br>
-            <br>
-            Tule jumpppaamaan kanssamme!
-            </p>
-        </div>
-    </footer>
-    </div><!--wrapper-->
 </div>
+</div>
+</div>
+
+    <footer>
+      <div class="wrapper">
+        <div class="site-footer">
+            <div class="footer-logo">
+                <img src="./img/hnv-logo-footer.png" alt="HNV">
+            </div>
+
+            <div class="address-info">
+                <h4>Hämeen Naisvoimistelijat Ry</h4>
+                <p>Toimisto, ma-pe klo 10-12<br>
+                toimisto(at)hameennaisvoimistelijat.fi<br>
+                045 631 0279<br>
+                Savikukonkatu 13, 33530 Tampere</p>
+            </div>
+
+
+            <div class="slogan">
+                <p>Hämeen naisvoimistelijat ry on<br>
+                tamperelainen jumppaseura, joka liikuttaa<br>
+                viikoittain lähes viittäsataa jumppaajaa.<br>
+                <br>
+                Tule jumpppaamaan kanssamme!
+                </p>
+            </div>
+        </div>
+      </div>
+    </footer>
 
 <!-- Toggle baseline grid -->
 <script>
